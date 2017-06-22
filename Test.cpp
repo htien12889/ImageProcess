@@ -26,17 +26,53 @@ using namespace cv;
 int photoToCartoon();
 int photoToWaterColor();
 int waterMark();
+int pencil();
 
 
 /** @function main */
 int main()
 {
 	clock_t start = clock();
-	photoToCartoon();
+	pencil();
 	clock_t stop = clock();
 	printf("Processing times: %d [ms]\n", stop - start);
 	return 0;
 }
+
+int pencil()
+{
+	Mat src, srcGray, srcDopg, dst;
+	src = imread("abcd.jpg");
+	cvtColor(src, srcGray, CV_BGR2GRAY);
+	GaussianBlur(srcGray, srcDopg, Size(7, 7), 0, 0, BORDER_DEFAULT);
+	//srcDopg = Mat(srcGray.size(), CV_8UC1);
+	for (int i = 0; i < srcGray.rows; i++)
+	{
+		for (int j = 0; j < srcGray.cols; j++)
+		{
+			srcDopg.at<uchar>(i, j) = 255 - srcDopg.at<uchar>(i, j);
+			int tmp = (int)((1 - 0.5) * srcGray.at<uchar>(i, j)) + (int)(0.5 * srcDopg.at<uchar>(i, j));
+			if (tmp > 255)
+			{
+				tmp = 255;
+			}
+
+			if (tmp != 255)
+			{
+				tmp = (tmp << 8) / (255 - tmp);
+				if (tmp > 255)
+				{
+					tmp = 255;
+				}
+			}
+			srcDopg.at<uchar>(i, j) = tmp;
+		}
+	}
+	
+	cv::imwrite("pencil.bmp", srcDopg);
+	return 0;
+}
+
 int waterMark()
 {
 	Mat src, waterMark, dst;
