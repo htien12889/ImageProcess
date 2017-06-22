@@ -42,9 +42,9 @@ int main()
 int pencil()
 {
 	Mat src, srcGray, srcDopg, dst;
-	src = imread("abcd.jpg");
+	src = imread("tien.jpg");
 	cvtColor(src, srcGray, CV_BGR2GRAY);
-	GaussianBlur(srcGray, srcDopg, Size(7, 7), 0, 0, BORDER_DEFAULT);
+	GaussianBlur(srcGray, srcDopg, Size(15, 15), 0, 0, BORDER_DEFAULT);
 	//srcDopg = Mat(srcGray.size(), CV_8UC1);
 	for (int i = 0; i < srcGray.rows; i++)
 	{
@@ -60,6 +60,7 @@ int pencil()
 			if (tmp != 255)
 			{
 				tmp = (tmp << 8) / (255 - tmp);
+				tmp *= 0.970;
 				if (tmp > 255)
 				{
 					tmp = 255;
@@ -173,7 +174,7 @@ int photoToCartoon()
 	int c;
 
 	/// Load an image
-	src = imread("tien1.png");
+	src = imread("abcd.jpg");
 
 	if (!src.data)
 	{
