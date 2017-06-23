@@ -24,6 +24,7 @@
 using namespace std;
 using namespace cv;
 int photoToCartoon();
+int photoToCartoonValue();
 int photoToWaterColor();
 int waterMark();
 int pencil();
@@ -33,16 +34,41 @@ int pencil();
 int main()
 {
 	clock_t start = clock();
-	pencil();
+	photoToCartoonValue();
 	clock_t stop = clock();
 	printf("Processing times: %d [ms]\n", stop - start);
+	return 0;
+}
+
+
+int photoToCartoonValue()
+{
+	Mat src, srcThresh;
+	src = imread("tien1.png");
+	cvtColor(src, srcThresh, CV_BGR2GRAY);
+	threshold(srcThresh, srcThresh, 80, 255, 0);
+	
+	 
+	for (int i = 0; i < srcThresh.rows; i++)
+	{
+		for (int j = 0; j < srcThresh.cols; j++)
+		{
+			if (srcThresh.at<uchar>(i, j) != 255)
+			{
+				src.at<Vec3b>(i, j)[0] = 0;
+				src.at<Vec3b>(i, j)[1] = 0;
+				src.at<Vec3b>(i, j)[2] = 0;
+			}
+		}
+	}
+	cv::imwrite("pencil.bmp", src);
 	return 0;
 }
 
 int pencil()
 {
 	Mat src, srcGray, srcDopg, dst;
-	src = imread("tien.jpg");
+	src = imread("tien1.png");
 	cvtColor(src, srcGray, CV_BGR2GRAY);
 	GaussianBlur(srcGray, srcDopg, Size(15, 15), 0, 0, BORDER_DEFAULT);
 	//srcDopg = Mat(srcGray.size(), CV_8UC1);
