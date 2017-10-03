@@ -22,5 +22,4 @@ if($results){
     }
 }
 $conn->close();
-echo "<h1>Sucessfully</h1>"
 ?>
