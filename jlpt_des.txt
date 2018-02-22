@@ -1,0 +1,30 @@
+JLPT Toàn Thư là ứng dụng học tiếng Nhật (hoc tieng Nhat) luyện JLPT hoàn thiện nhất hiện nay cho mọi cấp độ từ N5 tới N1.
+JLPT Toàn Thư cung cấp các bài học tiếng Nhật (hoc tieng Nhat) cho các cấp độ từ N5 tới N1 như sau:
+
+JLPT Toàn Thư N5:
+	- Ngữ Pháp N5
+	- Từ Vựng N5
+	- Kanji N5
+JLPT Toàn Thư N4:	
+	- Ngữ pháp N4
+	- Từ Vựng N4
+	- Kanji N4
+JLPT Toàn Thư N3:
+	- Ngữ Pháp N3
+	- Từ Vựng N3
+	- Kanji N3
+JLPT Toàn Thư N2:
+	- Ngữ pháp N2
+	- Từ Vựng N2
+	- Kanji N2
+JLPT Toàn Thư N1:
+	- Ngữ Pháp N1
+	- Từ Vựng N1
+	- Kanji N2
+	
+Ở phần từ vựng của mỗi JLPT Toàn Thư các bạn có thể học từ vựng tiếng Nhật theo phương pháp flash card và các bài tập trắc nghiệm về từ vựng tiếng Nhật sẽ giúp bạn luyện tập để nhớ bài lâu hơn.
+Ở phần Kanji của mỗi JLPT Toàn Thư các bạn có thể luyện viết, học cách phát âm kun và on theo các ví dụ. Đặc biệt có flash card giúp bạn dễ học và dễ nhớ, sau mỗi bài sẽ có bài trắc nghiệm để các bạn cũng cố kiến thức.
+JLPT Toàn Thư sẽ giúp các bạn học tiếng Nhật (hoc tieng Nhat) một cách dễ dàng cũng như cũng cố lại kiến thức của mình qua các bài trắc nghiệm từ vựng (trac nghiem tu vung) và trắc nghiệm kanji (trac nghiem kanji).
+Chúng tôi cũng đang cố gắng phát triển thêm các bài tập kiểm tra JLPT (JLPT test) để giúp các bạn thử sức và chuẩn bị tốt cho các kì thi jlpt.
+Nếu có bất cứ sai sót nào, vui lòng liên hệ với chúng tôi bằng cách để lại comment ở bên dưới. cám ơn các bạn.
+Chúc các bạn học tốt!
